@@ -1,0 +1,327 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,700);
+
+* {
+	box-sizing: border-box;
+}
+
+body, html {
+	margin:0;
+	padding:0;
+	font-family: 'Roboto';
+	font-weight: normal;
+	background-color: #1C2222;
+	color:white;
+	overflow-x: hidden;
+	position: relative;
+}
+
+h1 {
+	margin: 0;
+}
+
+#navigation {
+	width: 100%;
+	height: 70px;
+	color: white;
+}
+
+#navigation a {
+	text-decoration: none;
+	color: white;
+	display: block;
+	height: 100%;
+}
+
+#navigation .menu-button {
+	width: 50%;
+	float: left;
+	text-align: center;
+	height: 100%;
+	cursor: pointer;
+	background-color: #3B8686;
+	position: relative;
+}
+
+#navigation .menu-button span {
+	padding-top: 34px;
+	display: block;
+}
+
+#navigation .active-menu-button:after {
+	content: " ";
+	display: inline-block;
+	background: white;
+	width:100%;
+	height: 2px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-top: -2px;
+}
+
+#screens {
+	width: 200%;
+	transition: transform 0.4s;
+	-webkit-transition: -webkit-transform 0.4s;
+}
+
+#screens section {
+	width: 50%;
+	float: left;
+}
+
+.search {
+	
+}
+
+.watchlist {
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+}
+
+/* Search form */
+
+#form {
+	max-width: 300px;
+	width: 100%;
+	padding: 10px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+#form input {
+	width: 64%;
+	height: 40px;
+	outline: none;
+	border: none;
+	border-bottom: 2px solid #3B8686;
+	background: transparent;
+	color: white;
+	margin-right: 4%;
+	border-radius: 0;
+	font-size: 0.9em;
+}
+
+#form button {
+	width: 30%;
+	padding: 14px;
+	border: none;
+	color: white;
+	outline: none;
+	background-color: #3B8686;
+	font-weight: lighter;
+	font-size: 0.9em;
+}
+
+/* Search list */
+
+.list {
+	margin-top: 30px;
+	padding:0;
+}
+
+.loading {
+	width: 40px;
+	display: none;
+	margin: 0 auto;
+}
+
+.list li {
+	height:120px;
+	width:100%;
+	background-color: #222B2B;
+	position: relative;
+	list-style-type: none;
+	color: white;
+	cursor: pointer;
+}
+
+.list a:nth-of-type(odd) li {
+	background-color: #1C2222;
+}
+
+.list li div {
+	float: left;
+	width: 70%;
+	padding-left: 10px;
+	margin-top: 13px;
+}
+
+.list li h1 {
+	font-weight: normal;
+	font-size: 1.1em;
+}
+
+.list li span {
+	font-weight: lighter;
+	font-size: 0.8em;	
+	margin-top:10px;
+}
+
+.list li img {
+	height: 100%;
+	float: left;
+	width: 80.8px;
+}
+
+/* Checkbox */
+
+.list li input[type="checkbox"] {
+	display: none;
+}
+
+.list li label {
+	display: inline-block;
+    cursor: pointer;
+    position: relative;
+    font-size: 13px;
+}
+
+.list li label:before {
+    content: "";
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    right: 15px;
+    top: 31px;
+    background-color: #3B8686;
+}
+
+.list li input[type=checkbox]:checked + label:before {
+    content: "\2713";
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    font-size: 15px;
+    color: #f3f3f3;
+    text-align: center;
+    line-height: 24px;
+}
+
+/* eind checkbox */
+
+/* Detail */
+
+#detail_ {
+	color: white;
+}
+
+#detail_ h1 {
+	font-size: 1.4em;
+}
+
+#detail_ > .loading {
+	margin-top: 30px;
+}
+
+#detail_ .detail_movie_info {
+	float: left;
+	width: 70%;
+	padding: 20px 10px 10px 10px;
+}
+
+#detail_ .detail_movie_info span {
+	margin-top: 4px;
+	display: block;
+}
+
+#detail_ .detail_img_container {
+	float: left;
+	width: 30%;
+	position: relative;
+	height: 100%;
+}
+
+#detail_ .detail_img_container img {
+	width:100%;
+}
+
+#detail_ .detail_img_container .detail_rating {
+	position: absolute;
+    width: 100%;
+    height: 16%;
+    bottom: 4px;
+    background: rgba(59,134,134,0.8);
+    text-align: center;
+    padding-top: 4px;
+    color: white;
+    font-size: 3.5vw;
+}
+
+#detail_ .detail_description {
+	clear: both;
+	padding: 20px 20px 5px 20px;
+}
+
+#detail_ p {
+	padding: 20px 0 5px 0;
+	margin:0;
+}
+
+#detail_ .actors_title {
+	font-weight: bold;
+}
+
+#detail_ .actors {
+	padding-top:0;
+	font-size: 0.9em;
+}
+
+#detail_ > span {
+	clear: both;
+	font-weight: bold;
+	display: block;
+	padding: 20px 20px 0 20px;
+}
+
+#detail_ > .actors {
+	font-size: 0.8em;
+	padding-top: 0;
+	clear: both;
+}
+
+#detail_ > .description {
+	margin: 0;
+}
+
+/* Detail checkbox */
+
+
+#detail_ input[type="checkbox"]{
+	display: none;
+}
+
+#detail_ label{
+	display: inline-block;
+    cursor: pointer;
+    position: relative;
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+#detail_ label:before {
+    content: "Add to watchlist";
+    display: inline-block;
+    padding: 8px 10px 8px 10px;
+    background-color: #3B8686;
+}
+
+#detail_ input[type=checkbox]:checked + label:before {
+    content: "\2713";
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    font-size: 15px;
+    color: #f3f3f3;
+    text-align: center;
+    line-height: 17px;
+    width:17px;
+    height: 17px;
+}
+
+/* js classes */
+
+.show {
+	display: block;
+}
+
+.hide {
+	display: none;
+}
