@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Movies </title>
+    <title>Funda </title>
     <meta http-equiv="Content-type" content="text/html;charset=utf-8" />
     <meta name="description" content="Geef hier een beschrijving van de pagina" />
     <meta name="author" content="Raymond Korrel" />
@@ -14,7 +14,56 @@
 </head>
 <body>
 
-	
+	<div id="navigation">
+		<div>
+			<a href="#list"><img class="icon list" src="static/img/list.png"></a>
+		</div>
+		<div>
+			<a href="#overview"><img src="static/img/funda.png"></a>
+		</div>
+		<div>
+			<img class="icon settings" src="static/img/settings.png">
+		</div>
+	</div>
+
+	<div id="overview">
+		<div id="house">
+			<img class="house_img">
+			<div class="house_info">
+				<div class="house_location">
+					<span class="house_street"></span>
+					<span class="house_city"></span>
+				</div>
+				<span class="house_price"></span>
+			</div>
+		</div>
+
+		<div id="circle-container">
+			<div id="yes" class="circle">
+				<img src="static/img/yes.png">
+			</div>
+			<div id="no" class="circle">
+				<img src="static/img/no.png">
+			</div>
+		</div>
+	</div>
+
+	<ul id="list">
+		<li>
+			<div class="list_img_container">
+				<img class="list_img">
+				<div class="list_price_container">
+					<span class="list_price"></span>
+				</div>
+			</div>
+			<div class="list_info">
+				<span class="list_street"></span>
+				<span class="list_city"></span>
+			</div>
+			<img class="cross" src="static/img/no.png">
+		</li>
+	</ul>
+
 	
 <script src="static/js/lib/transparency.js" type="text/javascript"></script>
 <script src="static/js/lib/underscore-min.js" type="text/javascript"></script>
