@@ -22,12 +22,53 @@
 			<a href="#overview"><img src="static/img/funda.png"></a>
 		</div>
 		<div>
-			<img class="icon settings" src="static/img/settings.png">
+			<a href="#settings"><img class="icon settings" src="static/img/settings.png"></a>
 		</div>
 	</div>
 
 	<div id="overview">
-		<div id="house">
+		<div id="houses">
+			<div class="house">
+				<a class="house_detail"><img class="house_img"></a>
+				<div class="house_info">
+					<div class="house_location">
+						<span class="house_street"></span>
+						<span class="house_city"></span>
+					</div>
+					<span class="house_price"></span>
+				</div>
+			</div>
+		</div>
+		<div id="circle-container">
+			<div id="yes" class="circle" value="moveLeft">
+				<img src="static/img/yes.png">
+			</div>
+			<div id="no" class="circle" value="moveRight">
+				<img src="static/img/no.png">
+			</div>
+		</div>
+	</div>
+
+	<ul id="list">
+		<li>
+			<a class="list_detail">
+				<div class="list_img_container">
+					<img class="list_img">
+					<div class="list_price_container">
+						<span class="list_price"></span>
+					</div>
+				</div>
+				<div class="list_info">
+					<span class="list_street"></span>
+					<span class="list_city"></span>
+				</div>
+			</a>
+			<img class="cross" src="static/img/no.png">
+		</li>
+	</ul>
+
+	<div id="detail">
+		<div id="detail_house">
 			<img class="house_img">
 			<div class="house_info">
 				<div class="house_location">
@@ -36,34 +77,63 @@
 				</div>
 				<span class="house_price"></span>
 			</div>
-		</div>
+			<div class="house_full_info">
+				<div class="house_labels">
+					<span class="house_rooms"></span>
+					<span class="house_lagen"></span>
+					<span class="house_tuin"></span>
+				</div>
 
-		<div id="circle-container">
-			<div id="yes" class="circle">
-				<img src="static/img/yes.png">
-			</div>
-			<div id="no" class="circle">
-				<img src="static/img/no.png">
+				<label>Ligging</label>
+				<p class="house_ligging"></p>
+
+				<label>Omschrijving</label>
+				<p class="house_description"></p>
 			</div>
 		</div>
 	</div>
 
-	<ul id="list">
-		<li>
-			<div class="list_img_container">
-				<img class="list_img">
-				<div class="list_price_container">
-					<span class="list_price"></span>
-				</div>
-			</div>
-			<div class="list_info">
-				<span class="list_street"></span>
-				<span class="list_city"></span>
-			</div>
-			<img class="cross" src="static/img/no.png">
-		</li>
-	</ul>
+	<div id="settings">
+		<a href="#" class="close"></a>
+		<div id="settings-content">
+			<h1>Instellingen</h1>
+			<a href="#"><img src="static/img/no.png"></a>
+			<form id="form">
+				<label>
+					<span>Locatie</span>
+					<input key="locatie" type="text" value="amsterdam">
+				</label>
 
+				<div id="autosuggest" class="hide">
+					<span class="suggestion"></span>
+				</div>
+
+				<label>
+					<span>Kamers</span>
+					<input key="kamers" type="number" value="3">
+				</label>
+
+				<label>
+					<span>Minimum prijs</span>
+					<input key="minprijs" type="number" value="100000">
+				</label>
+
+				<label>
+					<span>Maximum prijs</span>
+					<input key="maxprijs" type="number" value="200000">
+				</label>
+
+				<label>
+					<span>Oppervlakte</span>
+					<input key="opp" type="number" value="50">
+				</label>
+
+				<button>Opslaan</button>
+			</form>
+		</div>
+	</div>
+
+	<img class="loading hide" src="static/img/loading.gif">
 	
 <script src="static/js/lib/transparency.js" type="text/javascript"></script>
 <script src="static/js/lib/underscore-min.js" type="text/javascript"></script>
